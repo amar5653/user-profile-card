@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="user">
-        <img src="myImg.jpg" alt="amarpreet with coffee cup">
+    <div class="user hide-details">
+        <img src="myImg.jpg" alt="amarpreet with coffee cup" >
         <div class="info">
         <h1>Amarpreet Kaur Gill</h1>
         <p>Front End Web Developer</p>
@@ -16,6 +16,22 @@
     </div> 
     <div class="close-icon"></div>
 </div>
+<script>
+    const img = document.querySelector("img");
+    const closeIcon = document.querySelector(".close-icon");
+    let user = document.querySelector(".user");
+
+    img.addEventListener("click", () => {
+        user.classList.remove("hide-details");
+    })
+
+    closeIcon.addEventListener("click", () =>{
+        user.classList.add("hide-details");
+        
+    })
+
+
+</script>
 
 </body>
 </html>
